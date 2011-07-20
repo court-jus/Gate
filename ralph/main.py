@@ -141,7 +141,7 @@ class World(DirectObject):
        
         # Uncomment this line to show a visual representation of the 
         # collisions occuring
-        #self.cTrav.showCollisions(render)
+        self.cTrav.showCollisions(render)
         
         # Create some lighting
         ambientLight = AmbientLight("ambientLight")
