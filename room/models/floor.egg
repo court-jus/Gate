@@ -1,0 +1,57 @@
+<CoordinateSystem> { Y-Up-Left }
+
+<Comment> {
+  "x2egg floor.x floor.egg"
+}
+<Texture> tref1 {
+  steel_floor.png
+}
+<Material> mref1 {
+  <Scalar> diffr { 1 }
+  <Scalar> diffg { 1 }
+  <Scalar> diffb { 1 }
+  <Scalar> specr { 1 }
+  <Scalar> specg { 1 }
+  <Scalar> specb { 1 }
+  <Scalar> shininess { 1 }
+}
+<Group> floor {
+  <Transform> {
+    <Matrix4> {
+      1 0 0 0
+      0 0 1 0
+      0 1 0 0
+      0 0 0 1
+    }
+  }
+  <Group> {
+    <VertexPool> vpool1 {
+      <Vertex> 0 {
+        -17.9256 2.68165e-14 17.9256
+        <UV> { -1.01172 -0.0117188 }
+        <Normal> { 0 1 0 }
+      }
+      <Vertex> 1 {
+        -17.9256 -2.68165e-14 -17.9256
+        <UV> { 2.00781 -0.0117188 }
+        <Normal> { 0 1 0 }
+      }
+      <Vertex> 2 {
+        17.9256 -2.68165e-14 -17.9256
+        <UV> { 2.00781 3.00781 }
+        <Normal> { 0 1 0 }
+      }
+      <Vertex> 3 {
+        17.9256 2.68165e-14 17.9256
+        <UV> { -1.01172 3.00781 }
+        <Normal> { 0 1 0 }
+      }
+    }
+    <Polygon> {
+      <RGBA> { 1 1 1 1 }
+      <TRef> { tref1 }
+      <MRef> { mref1 }
+      <VertexRef> { 0 1 2 3 <Ref> { vpool1 } }
+    }
+  }
+}
